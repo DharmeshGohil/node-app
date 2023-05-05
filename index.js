@@ -19,6 +19,7 @@ app.get("/api/download", async (req, res) => {
   try {
     const videoInfo = await youtubedl(videoURL, {
       dumpSingleJson: true,
+      skipDownload: true,
       noWarnings: true,
       noCallHome: true,
       noCheckCertificate: true,
